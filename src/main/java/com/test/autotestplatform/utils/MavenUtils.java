@@ -1,7 +1,6 @@
 package com.test.autotestplatform.utils;
 
 import java.io.*;
-import java.net.URL;
 
 /**
  * dongdong Created by 6:40 PM  2020/8/25
@@ -10,15 +9,17 @@ public class MavenUtils {
 
     /**
      * 添加依赖到pom
+     *
      * @return
      */
-    private static boolean addDependencyToPOM(){
+    private static boolean addDependencyToPOM() {
 
         return true;
     }
 
     /**
      * 解析pom文件,添加新增的依赖
+     *
      * @return
      */
     private static void parsePomFile(String content) {
@@ -28,12 +29,12 @@ public class MavenUtils {
         InputStreamReader isr = null;
         BufferedReader br = null;
         try {
-             is = new FileInputStream(file);
-             isr = new InputStreamReader(is,"UTF-8");
-             br = new BufferedReader(isr);
+            is = new FileInputStream(file);
+            isr = new InputStreamReader(is, "UTF-8");
+            br = new BufferedReader(isr);
             StringBuffer sb = new StringBuffer();
             String line = "";
-            while ( (line= br.readLine())!=null){
+            while ((line = br.readLine()) != null) {
                 sb.append(line);
                 sb.append("\n");
                 if (line.contains("<dependencies>")) {
@@ -46,7 +47,7 @@ public class MavenUtils {
             writer.write(sb.toString());
         } catch (IOException e) {
             e.printStackTrace();
-        }finally {
+        } finally {
             try {
                 writer.close();
                 is.close();
@@ -62,9 +63,10 @@ public class MavenUtils {
 
     /**
      * 写入pom文件
+     *
      * @return
      */
-    private static boolean writeToPOM(){
+    private static boolean writeToPOM() {
         return true;
     }
 
@@ -72,8 +74,8 @@ public class MavenUtils {
         String group = "com.aicai.fintech";
         String artifactId = "exodus-config-facade";
         String version = "2.0.0-SNAPSHOT";
-        String content = String.format("%s\n%s%s%s\n%s%s%s\n%s%s%s\n%s\n","<dependency>","<groupId>",group,"</groupId>",
-                "<artifactId>",artifactId,"</artifactId>","<version>",version,"</version>","</dependency>");
+        String content = String.format("\t\t%s\n\t\t\t%s%s%s\n\t\t\t%s%s%s\n\t\t\t%s%s%s\n\t\t%s\n", "<dependency>", "<groupId>", group, "</groupId>",
+                "<artifactId>", artifactId, "</artifactId>", "<version>", version, "</version>", "</dependency>");
         parsePomFile(content);
     }
 
