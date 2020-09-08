@@ -5,7 +5,7 @@ import java.io.*;
 /**
  * dongdong Created by 6:40 PM  2020/8/25
  */
-public class MavenUtils {
+public class MavenUtil {
 
     /**
      * 添加依赖到pom
