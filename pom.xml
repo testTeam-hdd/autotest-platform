@@ -17,6 +17,7 @@
 	<properties>
 		<java.version>8</java.version>
 		<dubbo.version>2.5.3</dubbo.version>
+		<testng.version>6.4</testng.version>
 	</properties>
 
 	<dependencies>
@@ -29,6 +30,12 @@
 			<groupId>com.aicai.fintech</groupId>
 			<artifactId>exodus-provider</artifactId>
 			<version>1.5.7-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>${testng.version}</version>
+			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>com.thoughtworks.xstream</groupId>

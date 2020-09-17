@@ -1,13 +1,15 @@
 package com.test.autotestplatform;
 
-import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootTest
-class AutotestPlatformApplicationTests {
+import org.testng.Assert;
+import org.testng.annotations.Test;
 
-	@Test
-	void contextLoads() {
-	}
+public class AutotestPlatformApplicationTests {
+
+    @Test
+    public void contextLoads() {
+        System.out.println(1);
+        Assert.assertEquals(1,2);
+    }
 
 }

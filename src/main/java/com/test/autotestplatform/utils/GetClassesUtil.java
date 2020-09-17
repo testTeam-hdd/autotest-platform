@@ -1,6 +1,5 @@
 package com.test.autotestplatform.utils;
 
-import com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BIConversion;
 import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Service;
@@ -209,13 +208,6 @@ public class GetClassesUtil {
                 System.out.println("class:" + value.getName());
             });
         }
-//        for (Class aClass : getClasses()) {
-//            System.out.println(aClass.getName());
-//        }
-//        groupingByProject();
-//        for (String key : map.keySet()) {
-//            System.out.println("map:"+key);
-//        }
     }
 
 
